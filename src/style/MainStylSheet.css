@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    display: block;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../images/car-bg-1.jpeg");
+}
