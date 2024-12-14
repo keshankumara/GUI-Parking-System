@@ -1,0 +1,33 @@
+.container_2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(56, 52, 45, 0.37);
+    padding: 100px 50px 50px 50px; /* top, right, bottom, left */
+}
+
+.slots {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.568);
+    margin: auto;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0 20px 0;
+    border-style: groove;
+    width: 300px;
+    height: 250px;
+
+}
+
+.slots:hover {
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
+.h3 {
+    margin: 20px;
+    justify-content: center;
+    color: rgba(169, 169, 169, 0.699);
+    font-size: 1.5rem;
+}

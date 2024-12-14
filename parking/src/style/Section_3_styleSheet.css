@@ -1,0 +1,33 @@
+.container_3 {
+    display:flex;
+    justify-content: center;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.712);
+}
+
+.btn {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 40%;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 2px solid white;
+    cursor: pointer; /* pointer, hand, grab, grabbing */
+}
+
+.btn::placeholder {
+    white-space: wrap;
+}
+
+
+.btn:hover {
+    background-color: #111111b0;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bolder;
+    border: 2px solid white;
+}
