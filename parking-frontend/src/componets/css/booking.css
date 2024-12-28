@@ -1,0 +1,95 @@
+.booking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa; 
+    padding: 20px;
+}
+
+.booking_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    background-color: #333333a2; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    max-width: 400px; 
+    width: 100%; 
+}
+
+.booking_form:hover {
+    background-color: #a09999fb;
+    color: white;
+}
+
+.booking_form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 5px;
+}
+
+.booking_form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    outline: none;
+    width: 100%; 
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease; 
+}
+.booking_form select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    outline: none;
+    width: 100%; 
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease; 
+
+}
+
+
+.booking_form input:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Subtle blue glow */
+}
+
+.booking_form select:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Subtle blue glow */
+}
+
+.booking_button {
+    justify-content: center;
+}
+
+button {
+    justify-content: center;
+    max-width: 400px; 
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: #007bff;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+button:hover {
+    background-color: #0350a1;
+    color: #ccc;
+}
+
+/* Add some responsive design 
+@media (max-width: 600px) {
+    .booking_form {
+        padding: 20px;
+        gap: 15px;
+    }
+}*/
