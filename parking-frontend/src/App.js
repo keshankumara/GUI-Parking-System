@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './componets/home';
-import Price from './componets/price';
+import About from './componets/about';
 import Booking from './componets/booking';
 import Admin from './componets/admin';
 
@@ -15,14 +15,14 @@ function App() {
           <ul className='nav-links'>
             <li><Link to="/" className='Home'>Home</Link></li>
             <li><Link to="/booking" className='Booking'>Booking</Link></li>
-            <li><Link to="/price" className='Price'>Price</Link></li>
+            <li><Link to="/about" className='Price'>About</Link></li>
             <li><Link to="/admin" className='Admin'>Admin</Link></li>
           </ul>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/booking" element={<Booking />} />
-          <Route path="/price" element={<Price />} />
+          <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </Router>
