@@ -26,7 +26,7 @@ const Booking = () => {
         <label>End</label>
         <input type="time" placeholder='hour : minutes AM/PM' />
 
-          <button>
+          <button className='bool_btn'>
             Book now
           </button>
         

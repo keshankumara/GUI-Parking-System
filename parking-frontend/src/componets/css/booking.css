@@ -68,7 +68,7 @@
     justify-content: center;
 }
 
-button {
+.bool_btn {
     justify-content: center;
     max-width: 400px; 
     margin-top: 10px;
@@ -81,7 +81,7 @@ button {
     font-weight: bolder;
 }
 
-button:hover {
+.bool_btn:hover {
     background-color: #0350a1;
     color: #ccc;
 }

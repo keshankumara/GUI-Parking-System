@@ -1,0 +1,49 @@
+.admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 100vh;
+}
+
+.h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.label-password {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px;
+}
+
+.password {
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.admin_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 10px;
+    gap: 5px;
+    font-size: larger;
+}
+
+.admin_login:hover {
+    background-color: #333;
+    color: white;
+}
