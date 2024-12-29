@@ -2,14 +2,14 @@
 
 ## Description
 
-The Vehicle Parking System is a comprehensive solution for managing car parking spaces. It includes functionalities such as displaying available parking spaces, booking slots, managing pricing, and admin operations. This project features a frontend built with modern web technologies.
+The Vehicle Parking System is a comprehensive solution for managing car parking spaces. It includes functionalities such as displaying available parking spaces, booking slots, managing slot details, and admin operations. This project features a frontend built with modern web technologies.
 
 ## Features
 
 - **Home Page**: Provides an overview of the parking system and welcomes users.
-- **Pricing Page**: Displays the pricing details for different parking durations and types.
+- **About Page**: Displays detailed information about the parking system, its features, and purpose.
 - **Booking Page**: Allows users to book parking slots.
-- **Admin Page**: Enables administrators to manage parking spaces, view bookings, and update pricing.
+- **Admin Page**: Enables administrators to manage parking spaces, view bookings, and update slot details.
 
 ## Technologies Used
 
@@ -31,7 +31,7 @@ The Vehicle Parking System is a comprehensive solution for managing car parking 
    ```
 2. Navigate to the project directory:
    ```bash
-   cd vehicle-parking-sg
+   cd vehicle-parking-system
    ```
 3. Install dependencies:
    ```bash
@@ -54,7 +54,7 @@ vehicle-parking-system/
 ├── src/
 │   ├── components/
 │   │   ├── Home.js
-│   │   ├── Pricing.js
+│   │   ├── About.js
 │   │   ├── Booking.js
 │   │   ├── Admin.js
 │   ├── App.js
@@ -68,7 +68,7 @@ vehicle-parking-system/
 ## Usage
 
 - Navigate to the Home page to learn about the system.
-- Visit the Pricing page to view detailed pricing information.
+- Visit the About page to view detailed information about the parking system.
 - Use the Booking page to reserve a parking spot.
 - Admins can log in to the Admin page to manage the system.
 
