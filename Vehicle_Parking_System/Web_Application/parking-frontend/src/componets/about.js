@@ -16,7 +16,7 @@ const Price = () => {
            <li>Interactive Interface: An intuitive design for both web and desktop users.</li>
        </ul>
        <p className='para'>Our mission is to optimize parking systems through technology, reducing time, stress, and congestion. With our innovative platform, we aim to create smarter cities, improve urban mobility, and enhance the parking experience for everyone. </p>
-        <p className='para'>Thank you for choosing the Vehicle Parking System. Together, let’s make parking smarter and stress-free!</p>
+        <p className='para'>Thank you for choosing the Vehicle Parking System. Together, let's make parking smarter and stress-free!</p>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const Home = () => {
 
         const price_of_car = 200.00;
         const price_of_bike = 100.00;
-        const price_of_truck = 500.00;
+        const price_of_truck = 1000.00;
 
         const space_of_car = 50;
         const space_of_bike = 100;

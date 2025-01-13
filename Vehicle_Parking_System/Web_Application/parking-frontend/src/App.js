@@ -5,6 +5,7 @@ import Home from './componets/home';
 import About from './componets/about';
 import Booking from './componets/booking';
 import Admin from './componets/admin';
+import AdminPanel from './componets/admin panel/admin_panel';
 
 function App() {
   return (
@@ -19,11 +20,13 @@ function App() {
             <li><Link to="/admin" className='Admin'>Admin</Link></li>
           </ul>
         </nav>
+        <link to ="/admin_panel" className='Admin_panel'></link>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin-panel" element={<AdminPanel />} />
         </Routes>
       </Router>
       <footer className='footer'>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Admin = () => {
   const [password, setPassword] = useState(""); // Use state to store the password input
-  const admin_password = "admin123"; // Correct password
+  const admin_password = "123"; // Correct password
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent form submission (refresh)
