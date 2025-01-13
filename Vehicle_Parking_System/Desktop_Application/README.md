@@ -1,27 +1,29 @@
+
 # Vehicle Parking System
 
 ## Description
 
-The Vehicle Parking System is a comprehensive solution for managing car parking spaces. It includes functionalities such as displaying available parking spaces, booking slots, managing slot details, and admin operations. This project features a frontend built with modern web technologies.
+The **Vehicle Parking System** is a desktop application built with WPF (Windows Presentation Foundation) and SQLite. It provides an intuitive solution for managing car parking spaces, including functionalities such as displaying available slots, booking slots, managing slot details, and performing admin operations.
 
 ## Features
 
-- **Home Page**: Provides an overview of the parking system and welcomes users.
-- **About Page**: Displays detailed information about the parking system, its features, and purpose.
-- **Booking Page**: Allows users to book parking slots.
-- **Admin Page**: Enables administrators to manage parking spaces, view bookings, and update slot details.
+- **Home Page**: Displays an overview of the parking system and welcomes users.
+- **About Page**: Showcases detailed information about the parking system, its features, and purpose.
+- **Booking Page**: Allows users to search and book parking slots.
+- **Admin Page**: Enables administrators to view bookings, manage parking spaces, and update slot details.
 
 ## Technologies Used
 
-- **Frontend**: React.js with React Router for navigation
-- **Styling**: CSS/SCSS or styled-components (depending on implementation)
-- **State Management**: Context API or any other state management library (if applicable)
+- **Frontend**: WPF (Windows Presentation Foundation) for a responsive and user-friendly interface.
+- **Database**: SQLite for lightweight and efficient local data storage.
+- **Programming Language**: C# for application logic and UI interaction.
 
 ## Installation
 
 ### Prerequisites
 
-- Node.js and npm installed on your machine.
+- Visual Studio (with .NET Desktop Development workload installed).
+- SQLite installed on your system or bundled in the application.
 
 ### Steps
 
@@ -29,59 +31,69 @@ The Vehicle Parking System is a comprehensive solution for managing car parking 
    ```bash
    git clone https://github.com/your-username/vehicle-parking-system.git
    ```
-2. Navigate to the project directory:
-   ```bash
-   cd vehicle-parking-system
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   npm start
-   ```
-5. Open your browser and visit:
-   ```
-   http://localhost:3000
-   ```
+
+2. Open the project in Visual Studio:
+   - Launch Visual Studio.
+   - Navigate to `File -> Open -> Project/Solution`.
+   - Select the `.sln` file from the cloned repository.
+
+3. Build the solution:
+   - Press `Ctrl+Shift+B` or select `Build -> Build Solution` from the menu.
+
+4. Run the application:
+   - Press `F5` to start the application.
+   - The system will launch the WPF application with SQLite integration.
 
 ## Folder Structure
 
 ```
 vehicle-parking-system/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── Home.js
-│   │   ├── About.js
-│   │   ├── Booking.js
-│   │   ├── Admin.js
-│   ├── App.js
-│   ├── index.js
-│   └── styles/
-│       └── (CSS or SCSS files)
-├── package.json
+├── Assets/
+│   ├── Images/          (Image resources)
+├── Data/
+│   ├── ParkingSystem.db (SQLite database file)
+├── Views/
+│   ├── Home.xaml        (Home Page UI)
+│   ├── About.xaml       (About Page UI)
+│   ├── Booking.xaml     (Booking Page UI)
+│   ├── Admin.xaml       (Admin Page UI)
+├── ViewModels/
+│   ├── HomeViewModel.cs
+│   ├── AboutViewModel.cs
+│   ├── BookingViewModel.cs
+│   ├── AdminViewModel.cs
+├── Models/
+│   ├── ParkingSlot.cs   (Data models)
+│   ├── Booking.cs
+├── App.xaml             (Application entry point)
+├── MainWindow.xaml       (Main Window UI)
 └── README.md
 ```
 
 ## Usage
 
-- Navigate to the Home page to learn about the system.
-- Visit the About page to view detailed information about the parking system.
-- Use the Booking page to reserve a parking spot.
-- Admins can log in to the Admin page to manage the system.
+1. **Home Page**: Launch the application and start at the Home page for an overview.
+2. **About Page**: Learn about the system’s features and purpose.
+3. **Booking Page**: Select a parking slot and confirm your booking.
+4. **Admin Page**: Manage parking spaces and view all bookings.
+
+## Database Details
+
+- The SQLite database file (`ParkingSystem.db`) is located in the `Data` folder.
+- Tables include:
+  - `ParkingSlots`: Stores slot details (availability, location, etc.).
+  - `Bookings`: Records user bookings with relevant details.
 
 ## Future Enhancements
 
 - Add user authentication for booking and admin operations.
-- Integrate a backend for persistent data storage.
-- Implement dynamic slot availability updates.
-- Add payment gateway integration for seamless transactions.
+- Integrate payment features for slot bookings.
+- Implement notifications for booking reminders.
+- Support multi-user environments with cloud integration.
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+Contributions are welcome! Fork the repository, create a feature branch, and submit a pull request for review.
 
 ## License
 
@@ -89,5 +101,4 @@ This project is licensed under the MIT License.
 
 ---
 
-Start managing your parking system with ease using the Vehicle Parking System!
-
+**Start managing parking operations effortlessly with the Vehicle Parking System!**
