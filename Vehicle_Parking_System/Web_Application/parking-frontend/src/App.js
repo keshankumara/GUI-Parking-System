@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Home from './componets/home';
-import About from './componets/about';
-import Booking from './componets/booking';
-import Admin from './componets/admin';
-import AdminPanel from './componets/admin panel/admin_panel';
+import Home from './pages/home';
+import About from './pages/about';
+import Booking from './pages/booking';
+import Admin from './pages/admin';
+import AdminPanel from './pages/AdminPanel/admin_panel';
 
 function App() {
   return (

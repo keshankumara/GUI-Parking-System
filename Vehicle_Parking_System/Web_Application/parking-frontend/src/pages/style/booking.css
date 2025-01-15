@@ -1,22 +1,29 @@
 .booking {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f8f9fa; 
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack image and form vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Ensure it spans the full viewport height */
+    background-color: #f8f9fa; /* Light background for contrast */
     padding: 20px;
+}
+
+.bookPark {
+    width: 100%;
 }
 
 .booking_form {
     display: flex;
     flex-direction: column;
-    gap: 20px; 
-    background-color: #333333a2; 
+    gap: 20px;
+    background-color: #333333a2;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
-    max-width: 400px; 
-    width: 100%; 
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
 }
 
 .booking_form:hover {
@@ -31,16 +38,7 @@
     margin-bottom: 5px;
 }
 
-.booking_form input {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc; 
-    border-radius: 5px;
-    outline: none;
-    width: 100%; 
-    box-sizing: border-box; 
-    transition: border-color 0.3s ease; 
-}
+.booking_form input,
 .booking_form select {
     padding: 10px;
     font-size: 14px;
@@ -50,26 +48,15 @@
     width: 100%; 
     box-sizing: border-box; 
     transition: border-color 0.3s ease; 
-
 }
 
-
-.booking_form input:focus {
-    border-color: #007bff; /* Highlight border on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Subtle blue glow */
-}
-
+.booking_form input:focus,
 .booking_form select:focus {
-    border-color: #007bff; /* Highlight border on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Subtle blue glow */
-}
-
-.booking_button {
-    justify-content: center;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
 .bool_btn {
-    justify-content: center;
     max-width: 400px; 
     margin-top: 10px;
     width: 100%;
@@ -79,17 +66,10 @@
     background-color: #007bff;
     font-size: larger;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .bool_btn:hover {
     background-color: #0350a1;
     color: #ccc;
 }
-
-/* Add some responsive design 
-@media (max-width: 600px) {
-    .booking_form {
-        padding: 20px;
-        gap: 15px;
-    }
-}*/

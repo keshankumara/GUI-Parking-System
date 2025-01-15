@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import UserForm from "../admin panel/userForm";
-import UsersTable from "../admin panel/userTable";
+import UserForm from "./userForm";
+import UsersTable from "./userTable";
 import Axios from "axios";
 import { useEffect, useState } from "react";
 //import { flushSync } from "react-dom";

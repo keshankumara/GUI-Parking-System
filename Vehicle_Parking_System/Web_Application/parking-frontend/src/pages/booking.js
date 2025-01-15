@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './css/booking.css';
+import './style/booking.css';
+import bookPark from '../componets/images/bookPark.jpeg';
 
 const Booking = () => {
   let _id = 0;
@@ -41,6 +42,9 @@ const Booking = () => {
 
   return (
     <div className='booking'>
+      <div className='booking-header'>
+        <img src={bookPark} alt='bookPark' className='bookPark'/>
+      </div>
       <form className='booking_form' onSubmit={handleSubmit}>
         <label>Your name </label>
         <input

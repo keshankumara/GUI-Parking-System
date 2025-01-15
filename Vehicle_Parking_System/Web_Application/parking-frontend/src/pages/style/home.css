@@ -1,0 +1,116 @@
+.home {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #20202765;
+}
+
+.home-header {
+    height: 50%;
+}
+
+.book-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: auto;
+    height: 3rem;
+    width: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+    transform:translateY(-180px);
+    transform: translateY(-180px);
+    display: block; /* Ensures centering if wrapped in a container */
+    text-align: center;
+    font-size: large;
+}
+
+.book-btn:hover {
+    background-color: #0056B3;
+}
+
+.home-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #20202765;
+}
+
+.parking {
+    margin: 0;
+    width: 100%;
+}
+
+.car {
+    display: inline-flex;
+    width: 300px;
+    aspect-ratio: 4 / 3;
+    margin-left: 10px;
+}
+
+.bike {
+    display: inline-flex;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    margin-left: 10px;
+}
+.truck {
+    display: inline-flex;
+    width: 270px;
+    aspect-ratio: 4 / 3;
+    margin-left: 10px;
+}
+
+.h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color:#d1cbcb;
+    border-radius: 20px;
+    width:300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    gap: 5px;
+    margin: 10px;
+}
+
+.card:hover {
+    background-color: #00000000;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+    height: 40px;
+    width: 80%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.cart-btn-settle {
+    transform: translateY(-20px);
+
+}
+
+.card-btn:hover {
+    background-color: #0056B3;
+}
