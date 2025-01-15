@@ -4,6 +4,7 @@ import bikeImage from '../componets/images/bike.png';
 import carImage from'../componets/images/car.png';
 import truckImage from '../componets/images/truck.png'; 
 import Parking from '../componets/images/park5.png';
+import NavBar from '../componets/navbar';
 
 
 const Home = () => {
@@ -47,6 +48,7 @@ const Home = () => {
 
   return (
     <div className='home'>
+        <NavBar/>
         <div className='home-header'>
                 <img src={Parking} alt='parking' className='parking'/>
                 <button className='book-btn'>Parking Here</button>

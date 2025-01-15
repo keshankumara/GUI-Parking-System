@@ -1,47 +1,54 @@
-.booking {
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack image and form vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    min-height: 100vh; /* Ensure it spans the full viewport height */
-    background-color: #f8f9fa; /* Light background for contrast */
-    padding: 20px;
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
 }
 
-.bookPark {
-    width: 100%;
+.main-div {
+    background-image: url('E:\3Rd sem\GUI\park\clone 0.2\GUI-Parking-System\Vehicle_Parking_System\Web_Application\parking-frontend\src\componets\images\bookPark.jpeg');
+    height: 100vh;
 }
+
 
 .booking_form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    background-color: #333333a2;
+    gap: 15px;
+    /* outline: 1px solid white; */
+    /* background-color: rgb(19, 4, 58); */
+    background: linear-gradient(180deg,#070942, #1f2d70);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
+    
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
-    max-width: 400px;
-    width: 100%;
+    width: 400px;
+    height: 400px;
     text-align: center;
-    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .booking_form:hover {
-    background-color: #a09999fb;
+    background-color: #14010113;
+    outline: 1px solid white;
     color: white;
+
 }
 
 .booking_form label {
     font-size: 16px;
     font-weight: bold;
-    color: #333; 
+    color: #ffffff; 
     margin-bottom: 5px;
 }
 
 .booking_form input,
 .booking_form select {
     padding: 10px;
-    font-size: 14px;
+    font-size: 11px;
     border: 1px solid #ccc; 
     border-radius: 5px;
     outline: none;
@@ -63,13 +70,14 @@
     padding: 10px;
     font-size: 14px;
     border-radius: 20px;
-    background-color: #007bff;
+    background-color: #06315f;
     font-size: larger;
     font-weight: bolder;
     cursor: pointer;
+    color: #b3b1b1;
 }
 
 .bool_btn:hover {
-    background-color: #0350a1;
+    background-color: #023163;
     color: #ccc;
 }
