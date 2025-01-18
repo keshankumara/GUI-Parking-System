@@ -1,0 +1,139 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F9F9F9;
+  color: #333333;
+}
+
+.navbarDiv {
+  padding-bottom: 15px;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.register-container {
+  max-width: 400px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 20px auto;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.register-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #004AAD;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 15px 0 30px;
+  color: #555555;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.register-form {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 1rem;
+  color: #333333;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #004AAD;
+  box-shadow: 0 0 8px rgba(0, 74, 173, 0.4);
+}
+
+.register-btn {
+  background-color: #004AAD;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  font-weight: 600;
+}
+
+.register-btn:hover {
+  background-color: #003380;
+  box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+}
+
+.register-footer {
+  margin-top: 20px;
+}
+
+.register-footer p {
+  font-size: 1rem;
+  color: #555555;
+}
+
+.register-footer a {
+  color: #004AAD;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .register-container {
+      padding: 25px;
+      margin: 15px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  p {
+      font-size: 1rem;
+  }
+
+  .input-group input, .register-btn {
+      font-size: 0.95rem;
+  }
+}

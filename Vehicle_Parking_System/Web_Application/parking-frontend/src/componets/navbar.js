@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <nav className='navbar'>
-      <h1 className='nav_header'>PARKING AREA</h1>
-      <ul className='nav-links'>
-        <li><Link to="/" className='Home'>Home</Link></li>
-        <li><Link to="/booking" className='Booking'>Booking</Link></li>
-        <li><Link to="/about" className='Price'>About</Link></li>
-        <li><Link to="/admin" className='Admin'>Admin</Link></li>
+    <nav className="navbar">
+      <h1 className="nav_header">PARKING AREA</h1>
+      <ul className="nav-links">
+        <li><Link to="/" className="nav-link">Home</Link></li>
+        <li><Link to="/about" className="nav-link">About</Link></li>
+        <li><Link to="/login" className="nav-link">Login</Link></li>
+        <li><Link to="/register" className="nav-link">Register</Link></li>
       </ul>
     </nav>
   );

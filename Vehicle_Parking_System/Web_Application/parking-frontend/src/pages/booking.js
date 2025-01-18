@@ -1,93 +1,104 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './style/booking.css';
-import NavBar from '../componets/navbar';
+import NavBar from '../componets/navbar'; // Fixed typo in 'components'
 
 const Booking = () => {
-  let _id = 0;
-  for (let i=0; i<1000; i++){
-    _id = i;
-  }
-
   const [formData, setFormData] = useState({
-    id:_id,
-    name: '',
+    email: '',
     vehicleType: '',
     vehicleNo: '',
     duration: '',
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target; // Corrected destructuring
+    setFormData({ ...formData, [name]: value }); // Use 'name' to update the correct property
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3001/bookings', {
-        method: 'POST',
+      const response = await axios.post('http://localhost:3001/bookings', formData, {
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
       });
-      if (response.ok) {
+
+      if (response.status === 200 && response.data.success) {
         alert('Booking Successful');
+        setFormData({
+          email: '',
+          vehicleType: '',
+          vehicleNo: '',
+          duration: '',
+        });
       } else {
-        alert('Booking Failed');
+        alert('Booking Failed. Please try again.');
       }
     } catch (error) {
-      console.error('Error:', error);
-      alert('Error submitting the form');
+      if (error.response) {
+        console.error('Backend Error:', error.response.data);
+        alert(`Error: ${error.response.data.message || 'Something went wrong'}`);
+      } else if (error.request) {
+        console.error('No Response:', error.request);
+        alert('No response from server. Please check your network.');
+      } else {
+        console.error('Error:', error.message);
+        alert('Error submitting the form. Please try again.');
+      }
     }
   };
 
   return (
-    <div className='main-div'>
-      <NavBar/>
-      <form className='booking_form' onSubmit={handleSubmit}>
-        <label>Your name </label>
+    <div className="main-div">
+      <NavBar />
+      <form className="booking_form" onSubmit={handleSubmit}>
+        <label>Email</label>
         <input
-          name='name'
-          value={formData.name}
+          name="email" // Corrected input name
+          value={formData.email}
           onChange={handleChange}
-          placeholder='Enter your name'
+          placeholder="Enter your email"
           required
         />
 
-        <label>Vehicle type </label>
+        <label>Vehicle Type</label>
         <select
-          name='vehicleType'
+          name="vehicleType"
           value={formData.vehicleType}
           onChange={handleChange}
           required
         >
-          <option value="" disabled>Select vehicle type</option>
+          <option value="" disabled>
+            Select vehicle type
+          </option>
           <option value="car">Car</option>
           <option value="bike">Bike</option>
           <option value="truck">Truck</option>
         </select>
 
-        <label>Your vehicle No</label>
+        <label>Vehicle Number</label>
         <input
-          name='vehicleNo'
+          name="vehicleNo"
           value={formData.vehicleNo}
           onChange={handleChange}
-          placeholder='Enter your vehicle number'
+          placeholder="Enter your vehicle number"
           required
         />
 
-        <label>Check-in time</label>
+        <label>Parking Duration (in hours)</label>
         <input
-          name='duration'
-          type='number'
-          step='0.1'
+          name="duration"
+          type="number"
+          step="0.1"
           value={formData.duration}
           onChange={handleChange}
-          placeholder='Enter parking duration time in hours (e.g., 0.5)'
+          placeholder="Enter duration (e.g., 0.5)"
           required
         />
 
-        <button className='bool_btn' type='submit'>
-          Book now
+        <button className="bool_btn" type="submit">
+          Book Now
         </button>
       </form>
     </div>

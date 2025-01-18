@@ -15,9 +15,11 @@ const parking = (req, res, next) => {
 const bookParking = (req, res, next) => {
     const user = new User({
         id: req.body.id,
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
         vehicle_no:req.body.vehicle_no,
         vehicle_type: req.body.vehicle_type,
-        name: req.body.name,
         time_duration: req.body.time_duration
 
     });
@@ -30,10 +32,88 @@ const bookParking = (req, res, next) => {
         })
 };
 
+const register = (req, res, next) => {
+    const { name, email, password } = req.body;
+
+    // Check if the email already exists
+    User.findOne({ email })
+        .then(existingUser => {
+            if (existingUser) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Email already in use.'
+                });
+            }
+
+            // Create new user if the email is not already taken
+            const user = new User({
+                name,
+                email,
+                password
+            });
+
+            user.save()
+                .then(response => {
+                    res.status(201).json({
+                        success: true,
+                        message: 'Registration successful!',
+                        user: {
+                            id: response._id,
+                            name: response.name,
+                            email: response.email
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error during registration:', error);
+                    res.status(500).json({
+                        success: false,
+                        message: 'Registration failed. Please try again.'
+                    });
+                });
+        })
+        .catch(error => {
+            console.error('Error while checking email existence:', error);
+            res.status(500).json({
+                success: false,
+                message: 'An error occurred while processing the request. Please try again later.'
+            });
+        });
+};
+
+
+// login
+
+const login = (req, res) => {
+    const { email, password } = req.body;
+
+    // Assuming `User` is your database model
+    User.findOne({ email: email })
+        .then(user => {
+            if (!user) {
+                // User not found
+                return res.status(404).json({ message: "User not found" });
+            }
+
+            if (user.password === password) {
+                // Password matches
+                res.json({ success: true, message: "Login successful", user });
+            } else {
+                // Password does not match
+                res.status(401).json({ success: false, message: "Invalid password" });
+            }
+        })
+        .catch(error => {
+            // Handle database errors
+            res.status(500).json({ message: "Error checking login", error });
+        });
+};
+
+
 // user edit
 
 const updateParking = (req, res, next) => {
-    const { id, vehicle_no, vehicle_type, name, time_duration } = req.body;
+    const { id, name,email, password, vehicle_no, vehicle_type, time_duration } = req.body;
 
     User.updateOne(
         { id: id }, // Filter: Find the document by `id`
@@ -41,6 +121,8 @@ const updateParking = (req, res, next) => {
             vehicle_no: vehicle_no,
             vehicle_type: vehicle_type,
             name: name,
+            email: email,
+            password: password,
             time_duration: time_duration 
         } // Update: Set new values
     )
@@ -60,8 +142,8 @@ const updateParking = (req, res, next) => {
 // user delete
 
 const deleteParking = (req, res,next) => {
-    const id = req.body.id;
-    User.deleteOne({id:id})
+    const id = req.body._id;
+    User.deleteOne({_id:id})
         .then(response =>{
             res.json({response});
         })
@@ -72,6 +154,8 @@ const deleteParking = (req, res,next) => {
 
 exports.bookParking = bookParking;
 exports.parking = parking;
+exports.login = login;
 exports.updateParking = updateParking;
 exports.deleteParking = deleteParking;
+exports.register = register;
 //exports.getUserById = getUserById;

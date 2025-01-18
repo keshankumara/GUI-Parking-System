@@ -1,11 +1,14 @@
 import { Grid, Typography } from '@mui/material';
-import { useEffect, useState } from 'react'; 
+import { useEffect, useState } from 'react';
+import './userForm.css';
 
 const UserForm = ({ bookParking, updateParking, submitted, data, isEdit }) => {
     const [id, setId] = useState(0);
     const [vehicle_no, setVehicleNo] = useState('');
     const [vehicle_type, setVehicleType] = useState('');
     const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [time_duration, setTimeDuration] = useState('');
 
     useEffect(() => {
@@ -14,113 +17,92 @@ const UserForm = ({ bookParking, updateParking, submitted, data, isEdit }) => {
             setVehicleNo('');
             setVehicleType('');
             setName('');
+            setEmail('');
+            setPassword('');
             setTimeDuration(0);
         }
     }, [submitted]);
 
     useEffect(() => {
-        if (data?.id && data.id !== 0) {
+        if (data?._id && data._id !== 0) {
             setId(data.id);
             setVehicleNo(data.vehicle_no);
             setVehicleType(data.vehicle_type);
-            setName(data.name);
+            setName(data.username);
+            setEmail(data.email);
+            setPassword(data.password);
             setTimeDuration(data.time_duration);
         }
     }, [data]);
 
     const handleSubmit = () => {
-        const data = {
+        const formData = {
             id,
+            name,
+            email,
+            password,
             vehicle_no,
             vehicle_type,
-            name,
             time_duration,
         };
         if (isEdit) {
-            updateParking(data);
+            updateParking(formData);
         } else {
-            bookParking(data);
+            bookParking(formData);
         }
     };
 
     return (
-        <Grid container spacing={2} sx={{ backgroundColor: '#ffffff', marginBottom: '30px', display: 'block' }}>
+        <Grid container spacing={2} className="form-container">
             <Grid item xs={12}>
-                <Typography
-                    component="h1"
-                    sx={{ color: '#ff5733' }}
-                    fontSize={100}
-                    fontWeight={'bold'}
-                    display={'flex'}
-                    marginLeft={'50px'}
-                >
-                    User Form
-                </Typography>
+                <Typography className="form-title">User Form</Typography>
             </Grid>
 
             {/* ID Input */}
-            <Grid item xs={12} sm={6} sx={{ display: 'flex' }}>
-                <Typography
-                    component="label"
-                    sx={{
-                        color: '#000000',
-                        marginRight: '20px',
-                        fontSize: '16px',
-                        width: '100px',
-                        display: 'block',
-                        fontWeight: 'bold',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    ID
-                </Typography>
-                <input type="number" value={id} onChange={(e) => setId(e.target.value)} />
+            <Grid item xs={12} sm={6} className="form-row">
+                <label htmlFor="id">ID</label>
+                <input type="number" id="id" value={id} onChange={(e) => setId(e.target.value)} />
             </Grid>
 
             {/* Vehicle Number Input */}
-            <Grid item xs={12} sm={6} sx={{ display: 'flex' }}>
-                <Typography component="label" sx={{ ...labelStyle }}>
-                    Vehicle No
-                </Typography>
-                <input type="text" value={vehicle_no} onChange={(e) => setVehicleNo(e.target.value)} />
+            <Grid item xs={12} sm={6} className="form-row">
+                <label htmlFor="vehicle_no">Vehicle No</label>
+                <input type="text" id="vehicle_no" value={vehicle_no} onChange={(e) => setVehicleNo(e.target.value)} />
             </Grid>
-            {/* Vehicle type Input */}
-            <Grid item xs={12} sm={6} sx={{ display: 'flex' }}>
-                <Typography component="label" sx={{ ...labelStyle }}>
-                    Vehicle Type
-                </Typography>
-                <input type="text" value={vehicle_type} onChange={(e) => setVehicleType(e.target.value)} />
+
+            {/* Vehicle Type Input */}
+            <Grid item xs={12} sm={6} className="form-row">
+                <label htmlFor="vehicle_type">Vehicle Type</label>
+                <input type="text" id="vehicle_type" value={vehicle_type} onChange={(e) => setVehicleType(e.target.value)} />
             </Grid>
 
             {/* Name Input */}
-            <Grid item xs={12} sm={6} sx={{ display: 'flex' }}>
-                <Typography component="label" sx={{ ...labelStyle }}>
-                    Name
-                </Typography>
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+            <Grid item xs={12} sm={6} className="form-row">
+                <label htmlFor="name">Username</label>
+                <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+            </Grid>
+
+            {/* Email Input */}
+            <Grid item xs={12} sm={6} className="form-row">
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            </Grid>
+
+            {/* Password Input */}
+            <Grid item xs={12} sm={6} className="form-row">
+                <label htmlFor="password">Password</label>
+                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             </Grid>
 
             {/* Time Duration Input */}
-            <Grid item xs={12} sm={6} sx={{ display: 'flex' }}>
-                <Typography component="label" sx={{ ...labelStyle }}>
-                    Time Duration
-                </Typography>
-                <input type="number" value={time_duration} onChange={(e) => setTimeDuration(e.target.value)} />
+            <Grid item xs={12} sm={6} className="form-row">
+                <label htmlFor="time_duration">Time Duration</label>
+                <input type="number" id="time_duration" value={time_duration} onChange={(e) => setTimeDuration(e.target.value)} />
             </Grid>
 
             {/* Submit Button */}
             <Grid item xs={12}>
-                <button
-                    style={{
-                        marginLeft: '175px',
-                        backgroundColor: '#006eff',
-                        color: '#fff',
-                        padding: '10px 20px',
-                        cursor: 'pointer',
-                    }}
-                    onClick={handleSubmit}
-                >
+                <button className="submit-button" onClick={handleSubmit}>
                     {isEdit ? 'Update' : 'Add'}
                 </button>
             </Grid>
@@ -129,14 +111,3 @@ const UserForm = ({ bookParking, updateParking, submitted, data, isEdit }) => {
 };
 
 export default UserForm;
-
-const labelStyle = {
-    color: '#000000',
-    marginRight: '20px',
-    fontSize: '16px',
-    width: '100px',
-    display: 'block',
-    fontWeight: 'bold',
-    alignItems: 'center',
-    justifyContent: 'center',
-};

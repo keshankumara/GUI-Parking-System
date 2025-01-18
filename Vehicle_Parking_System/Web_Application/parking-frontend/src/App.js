@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Booking from './pages/booking';
 import About from './pages/about';
-import Admin from './pages/admin';
+import Login from './pages/login';
+import Register from './pages/register';
 import AdminPanel from './pages/AdminPanel/admin_panel';
-import NavBar from './componets/navbar';
 
 function App() {
   return (
@@ -16,8 +16,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/about" element={<About />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/admin-panel" element={<AdminPanel />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/admin" element={<AdminPanel />} />
       </Routes>
     </Router>
   );

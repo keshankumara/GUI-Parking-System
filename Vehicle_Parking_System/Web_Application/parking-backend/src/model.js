@@ -4,9 +4,11 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     id : Number,
+    name: String,
+    email: String,
+    password: String,
     vehicle_no: String,
     vehicle_type: String,
-    name: String,
     time_duration:String,
     
 });

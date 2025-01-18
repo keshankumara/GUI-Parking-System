@@ -21,6 +21,8 @@ app.get('/parking', (req, res) => {
     });
 });
 
+
+
 app.post('/booking', (req, res) => {
     controller.bookParking (req.body, (callback) => {
         res.send();

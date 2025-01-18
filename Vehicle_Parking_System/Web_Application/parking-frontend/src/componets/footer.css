@@ -1,0 +1,105 @@
+/* General Footer Styling */
+.footer {
+    display: block;
+    background-color: #1A202C; /* Dark navy background */
+    color: #E2E8F0; /* Light gray text */
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .footer-brand, .footer-links, .footer-contact {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+  }
+  
+  .footer-header {
+    color: #38B2AC; /* Vibrant teal for brand name */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .footer-brand p, .footer-contact p {
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  .footer-links h3, .footer-contact h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin: 10px 0;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: #38B2AC; /* Teal for links */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: #E2E8F0; /* Light gray on hover */
+  }
+  
+  /* Social Icons */
+  .footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .social-icon {
+    color: #38B2AC; /* Teal for icons */
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #E2E8F0; /* Light gray on hover */
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid rgba(226, 232, 240, 0.3); /* Subtle divider */
+    padding-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-brand, .footer-links, .footer-contact {
+      text-align: center;
+    }
+  
+    .footer-link {
+      font-size: 1.1rem;
+    }
+  }
+  

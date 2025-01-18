@@ -6,8 +6,10 @@ body {
 }
 
 .main-div {
-    background-image: url('E:\3Rd sem\GUI\park\clone 0.2\GUI-Parking-System\Vehicle_Parking_System\Web_Application\parking-frontend\src\componets\images\bookPark.jpeg');
+    background-image: url('E:\3Rd sem\GUI\park\clone 0.2\GUI-Parking-System\Vehicle_Parking_System\Web_Application\parking-frontend\src\componets\images\park8.jpg');
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -17,7 +19,7 @@ body {
     gap: 15px;
     /* outline: 1px solid white; */
     /* background-color: rgb(19, 4, 58); */
-    background: linear-gradient(180deg,#070942, #1f2d70);
+    background: linear-gradient(180deg,#07094259, #1f2c705b);
     padding: 30px;
     border-radius: 5px;
     

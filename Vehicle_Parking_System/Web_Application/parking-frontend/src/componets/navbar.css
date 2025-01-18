@@ -1,42 +1,85 @@
-.nav_header {
-  margin-left: 100px;
-}
-
+/* General Navbar Styling */
 .navbar {
- /*  background-color: #070942; */
-  background: linear-gradient(180deg, #070942, #1f2d70);
-  color: white;
-  text-decoration: none;
+  background-color: #fff;  /* White background */
+  color: #333;  /* Dark text color */
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  align-items: center;
+  padding: 20px 60px;  /* Increased padding for more height */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow for modern look */
+  border-bottom: 2px solid #f0f0f0;  /* Subtle bottom border */
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  color: #FFFF00;
-  text-decoration: none;
-  justify-content: flex-end;
-}
-
-
-
-.nav-links {
-  display: inline-flex;
-  margin-right: 50px;
-  font-size: 20px;
+.nav_header {
+  font-size: 2.2rem;  /* Increased font size */
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  justify-content: flex-end; /* space evenly, space around, space between , space evenly , center, flex-start, flex-end , stretch */
-  padding: 10px 20px;
-  list-style-type: none;
-  gap: 40px;
+  color: #004AAD;  /* Blue color */
+  margin: 0;
 }
 
-.navbar .nav-links li a {
+/* Navbar Links Container */
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   list-style-type: none;
+  margin: 0;
+  gap: 30px;
+}
+
+/* Individual Link Styles */
+.nav-link {
+  color: #333;  /* Dark text color */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #037717;  /* Green hover effect */
+  color: #fff;  /* White text on hover */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .nav_header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
 }

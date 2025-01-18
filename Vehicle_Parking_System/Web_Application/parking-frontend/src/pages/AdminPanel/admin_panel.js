@@ -3,9 +3,7 @@ import UserForm from "./userForm";
 import UsersTable from "./userTable";
 import Axios from "axios";
 import { useEffect, useState } from "react";
-//import { flushSync } from "react-dom";
-
-//const API_BASE_URL = 'http://localhost:3001/api';
+import NavBar from '../../componets/navbar';
 
 const Users = () => {
     const [users, setUsers] = useState([]);
@@ -26,7 +24,6 @@ const Users = () => {
                 console.log("Axios Error: ", error);
             });
     };
-
 
     const bookParking = async (data) => {
         setSubmitted(true);
@@ -65,23 +62,26 @@ const Users = () => {
     };
 
     return (
-        <Box sx={{ width: 'calc(100% - 100px)', margin: 'auto', marginTop: '100px' }}>
-            <UserForm
-                bookParking={bookParking}
-                updateParking={updateParking}
-                submitted={submitted}
-                data={selectedUser}
-                isEdit={isEdit}
-            />
-            <UsersTable
-                rows={users}
-                selectedUser={(data) => {
-                    setSelectedUser(data);
-                    setIsEdit(true);
-                }}
-                deleteUser={(data) => window.confirm("Are you sure you want to delete this user?") && deleteParking(data)}
-            />
-        </Box>
+        <div>
+            <NavBar />
+            <Box sx={{ width: 'calc(100% - 100px)', margin: 'auto', marginTop: '100px' }}>
+                <UserForm
+                    bookParking={bookParking}
+                    updateParking={updateParking}
+                    submitted={submitted}
+                    data={selectedUser}
+                    isEdit={isEdit}
+                />
+                <UsersTable
+                    rows={users}
+                    selectedUser={(data) => {
+                        setSelectedUser(data);
+                        setIsEdit(true);
+                    }}
+                    deleteUser={(data) => window.confirm("Are you sure you want to delete this user?") && deleteParking(data)}
+                />
+            </Box>
+        </div>
     );
 };
 

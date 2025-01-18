@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import NavBar from '../componets/navbar';
 
 const Admin = () => {
   const [password, setPassword] = useState(""); // Use state to store the password input
@@ -18,6 +19,7 @@ const Admin = () => {
 
   return (
     <div>
+      <NavBar/>
       <h2>Admin Login</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="password">Password:</label>

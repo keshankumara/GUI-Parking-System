@@ -1,24 +1,47 @@
 import React from 'react';
 import './style/about.css';
+import NavBar from '../componets/navbar';
+import Footer from '../componets/footer';
 
-const Price = () => {
-
-  return (
-    <div className='about'>
-       <h1 className='main_header'>About Us</h1>
-       <h4 className='sub_header'>Welcome to the Vehicle Parking System – your one-stop solution for seamless parking management!</h4> 
-       <p className='para'>We understand the challenges of finding parking spaces in today's busy world. Our system is designed to make parking hassle-free, efficient, and user-friendly. Whether you're a driver looking for a convenient spot or a parking lot owner managing multiple spaces, our platform caters to all your needs.</p>  
-       <h4 className='sub_header'>Key Features:</h4> 
-       <ul>
-           <li>Real-time Parking Availability: View available parking spaces instantly.</li>
-           <li>Easy Booking: Reserve your spot in just a few clicks.</li>
-           <li>Flexible Management: Manage parking slots, bookings, and pricing effortlessly.</li>
-           <li>Interactive Interface: An intuitive design for both web and desktop users.</li>
-       </ul>
-       <p className='para'>Our mission is to optimize parking systems through technology, reducing time, stress, and congestion. With our innovative platform, we aim to create smarter cities, improve urban mobility, and enhance the parking experience for everyone. </p>
-        <p className='para'>Thank you for choosing the Vehicle Parking System. Together, let's make parking smarter and stress-free!</p>
-    </div>
-  );
+const About = () => {
+    return (
+        <div>
+            <div className="navbarDiv">
+                <NavBar />
+            </div>
+            <div className="about">
+                <div className="about-container">
+                    <h1>About Us</h1>
+                    <p>
+                        Welcome to <strong>Smart Parking System</strong>, your ultimate solution for hassle-free and efficient parking management. 
+                        Our mission is to transform the way you park, making it more convenient, time-saving, and stress-free.
+                    </p>
+                    <h2>What We Offer</h2>
+                    <ul>
+                        <li><strong>Real-Time Slot Availability:</strong> Check and book parking spaces instantly.</li>
+                        <li><strong>Affordable Pricing:</strong> Competitive rates to suit your parking needs.</li>
+                        <li><strong>User-Friendly Interface:</strong> A seamless experience from booking to parking.</li>
+                        <li><strong>Secure Environment:</strong> Ensuring the safety of your vehicles at all times.</li>
+                    </ul>
+                    <h2>Our Vision</h2>
+                    <p>
+                        At Smart Parking System, we envision a future where parking is no longer a hassle. 
+                        By leveraging modern technology, we aim to provide solutions that save time, reduce traffic congestion, 
+                        and enhance your overall experience.
+                    </p>
+                    <h2>Why Choose Us?</h2>
+                    <p>
+                        Whether you're a daily commuter or just visiting, Smart Parking System is your trusted partner. 
+                        With features like real-time availability, easy bookings, and competitive pricing, 
+                        we are redefining how parking works in the modern world.
+                    </p>
+                </div>
+            </div>
+            <div className="navbarDiv">
+                <Footer />
+            </div>
+        </div>
+    );
 };
 
-export default Price;
+export default About;
