@@ -1,5 +1,9 @@
 import React from 'react';
 import './footer.css';
+import facebook from './images/facebook.ico';
+import twitter from './images/twitter.ico';
+import linkedin from './images/linkedin.ico';
+import whatsapp from './images/whatsapp.ico';
 
 function Footer() {
   return (
@@ -7,13 +11,11 @@ function Footer() {
       <div className="footer-container">
         {/* Brand Information */}
         <div className="footer-brand">
-          <h2 className="footer-header">PARKING AREA</h2>
-          <p>
+          <h2 className="footer-header">ParkEase</h2>
+          <p className='footer_para'>
             Transforming parking with real-time availability, secure bookings, and smart solutions for a hassle-free experience.
           </p>
         </div>
-
-        {/* Quick Links */}
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
@@ -23,25 +25,21 @@ function Footer() {
             <li><a href="/register" className="footer-link">Register</a></li>
           </ul>
         </div>
-
-        {/* Contact Information */}
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p>Email: support@parkingarea.com</p>
-          <p>Phone: +1 234 567 890</p>
-          <p>Address: 123 Parking St, Tech City</p>
-          <div className="footer-socials">
-            <a href="#" className="social-icon"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-twitter"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-instagram"></i></a>
-          </div>
+          <p className='footer_para'>Email: keshnkumara11@gmail.com</p>
+          <p className='footer_para'>Phone: 071 0334073</p>
+          <p className='footer_para'>Address: 123 Parking St, Tech City</p>
+          {/* <div className="footer-socials">
+            <a href="https://twitter.com" className="social-icon"><img src={whatsapp} alt="whatsapp" /></a>
+            <a href="https://twitter.com" className="social-icon"><img src={facebook} alt="Facebook" /></a>
+            <a href="https://twitter.com" className="social-icon"><img src={twitter} alt="Twitter" /></a>
+            <a href="https://twitter.com" className="social-icon"><img src={linkedin} alt="LinkedIn" /></a>     
+          </div> */}
         </div>
       </div>
-
-      {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>&copy; 2025 PARKING AREA. All rights reserved.</p>
+        <p className='copright_test'>&copy; 2025 ParkEase. All rights reserved.</p>
       </div>
     </footer>
   );

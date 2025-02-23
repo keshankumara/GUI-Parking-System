@@ -3,11 +3,17 @@
   background-color: #fff;  /* White background */
   color: #333;  /* Dark text color */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;  /* Increased padding for more height */
+  padding: 15px 60px 5px 60px;  /* Increased padding for more height */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow for modern look */
   border-bottom: 2px solid #f0f0f0;  /* Subtle bottom border */
+  /* left,right,top,bottom */
+}
+
+.nav_icon{
+  width: auto;
+  height: 50px;
+  margin:0 10px 0 10px; /* margin: top right bottom left */
+  padding:0;
 }
 
 .nav_header {
@@ -26,6 +32,7 @@
   list-style-type: none;
   margin: 0;
   gap: 30px;
+  margin:0 10px 0 auto;
 }
 
 /* Individual Link Styles */
@@ -41,7 +48,7 @@
 }
 
 .nav-link:hover {
-  background-color: #037717;  /* Green hover effect */
+  background-color: #0c43f5;  /* Green hover effect */
   color: #fff;  /* White text on hover */
 }
 

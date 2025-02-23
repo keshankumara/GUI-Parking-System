@@ -23,11 +23,12 @@
   }
   
   .footer-header {
-    color: #38B2AC; /* Vibrant teal for brand name */
+    color: white; /* Vibrant teal for brand name */
     font-size: 1.8rem;
     margin-bottom: 15px;
     font-weight: 600;
   }
+
   
   .footer-brand p, .footer-contact p {
     margin: 10px 0;
@@ -35,11 +36,16 @@
   }
   
   .footer-links h3, .footer-contact h3 {
+    color: white; /* Vibrant teal for brand name */
+    font-size: 1.8rem;
     margin-bottom: 15px;
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   
+.copright_test{
+  color: rgb(192, 188, 188);
+}
+
   .footer-links ul {
     list-style: none;
     padding: 0;
@@ -51,7 +57,7 @@
   
   .footer-link {
     text-decoration: none;
-    color: #38B2AC; /* Teal for links */
+    color: white; /* Teal for links */
     font-size: 1rem;
     font-weight: 500;
     transition: color 0.3s;
@@ -69,9 +75,13 @@
   }
   
   .social-icon {
+    display: inline-block;
     color: #38B2AC; /* Teal for icons */
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Smaller icon size */
     transition: color 0.3s;
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    margin-right: 10px; /* Space between icons */
   }
   
   .social-icon:hover {
@@ -85,6 +95,10 @@
     padding-top: 15px;
     text-align: center;
     font-size: 0.9rem;
+  }
+
+  .footer_para{
+    color: white;
   }
   
   /* Responsive Design */
