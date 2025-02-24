@@ -15,7 +15,14 @@ const Login = () => {
         try {
             const response = await axios.post('http://localhost:3001/api/login', { email, password });
             if (response?.data?.success) {
-                window.location.href = '/booking';
+                if (email==="admin@gmail.com" && password==="000"){
+                    window.location.href = '/admin';
+                }
+                else{
+                    window.location.href = '/booking';
+                }
+                localStorage.setItem('isLogin', true);
+    
             } else {
                 setErrorMessage('Invalid credentials, please try again.');
             }

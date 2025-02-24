@@ -1,5 +1,6 @@
 const User = require('./model');
 
+
 // get user
 const parking = (req, res, next) => {
     User.find()
@@ -13,24 +14,43 @@ const parking = (req, res, next) => {
 
 // add user
 const bookParking = (req, res, next) => {
-    const user = new User({
-        id: req.body.id,
-        name: req.body.name,
-        email: req.body.email,
-        password: req.body.password,
-        vehicle_no:req.body.vehicle_no,
-        vehicle_type: req.body.vehicle_type,
-        time_duration: req.body.time_duration
+    console.log("Received Data:", req.body); // Log request body to debug
 
-    });
-    user.save()
-        .then(response => {
-            res.json({response});
+    if (!req.body || Object.keys(req.body).length === 0) {
+        return res.status(400).json({ success: false, message: "Request body is empty" });
+    }
+
+    const { email, vehicle_no, vehicle_type, time_duration } = req.body;
+
+    if (!email) {
+        return res.status(400).json({ success: false, message: "Email is required" });
+    }
+
+    User.findOne({ email })
+        .then(user => {
+            if (!user) {
+                return res.status(404).json({ message: "User not found" });
+            }
+
+            User.updateOne(
+                { _id: user._id }, 
+                { vehicle_no, vehicle_type, time_duration }
+            )
+            .then(response => {
+                if (response.matchedCount > 0) {
+                    res.json({ success: true, message: "Update successful", response });
+                } else {
+                    res.json({ success: false, message: "No document found" });
+                }
+            })
+            .catch(error => res.status(500).json({ success: false, message: "Error updating data", error }));
         })
-        .catch(error => {
-            res.json({message:error});
-        })
+        .catch(error => res.status(500).json({ success: false, message: "Error finding user", error }));
 };
+
+
+
+
 
 const register = (req, res, next) => {
     const { name, email, password } = req.body;
@@ -113,10 +133,10 @@ const login = (req, res) => {
 // user edit
 
 const updateParking = (req, res, next) => {
-    const { id, name,email, password, vehicle_no, vehicle_type, time_duration } = req.body;
+    const {name,email, password, vehicle_no, vehicle_type, time_duration } = req.body;
 
     User.updateOne(
-        { id: id }, // Filter: Find the document by `id`
+        { email: email }, // Filter: Find the document by `email`
         { 
             vehicle_no: vehicle_no,
             vehicle_type: vehicle_type,

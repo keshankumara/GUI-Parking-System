@@ -53,7 +53,7 @@ const Home = () => {
       <NavBar />
       <div className="header-div">
         <h1 className="header1">
-          Smart Parking Solutions <br></br>for Modern Cities
+          Smart Parking Solutions <br/>for Modern Cities
         </h1>
         <p className="para1">
           Find and reserve your perfect parking spot in seconds. Safe, secure,

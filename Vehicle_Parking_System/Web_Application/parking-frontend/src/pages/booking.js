@@ -6,9 +6,9 @@ import NavBar from '../componets/navbar'; // Fixed typo in 'components'
 const Booking = () => {
   const [formData, setFormData] = useState({
     email: '',
-    vehicleType: '',
-    vehicleNo: '',
-    duration: '',
+    vehicle_type: '',
+    vehicle_no: '',
+    time_duration: '',
   });
 
   const handleChange = (e) => {
@@ -20,7 +20,7 @@ const Booking = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3001/bookings', formData, {
+      const response = await axios.post('http://localhost:3001/api/booking', formData, {
         headers: { 'Content-Type': 'application/json' },
       });
 
@@ -28,9 +28,9 @@ const Booking = () => {
         alert('Booking Successful');
         setFormData({
           email: '',
-          vehicleType: '',
-          vehicleNo: '',
-          duration: '',
+          vehicle_type: '',
+          vehicle_no: '',
+          time_duration: '',
         });
       } else {
         alert('Booking Failed. Please try again.');
@@ -64,8 +64,8 @@ const Booking = () => {
 
         <label>Vehicle Type</label>
         <select
-          name="vehicleType"
-          value={formData.vehicleType}
+          name="vehicle_type" // Corrected name attribute to match the state key
+          value={formData.vehicle_type}
           onChange={handleChange}
           required
         >
@@ -79,8 +79,8 @@ const Booking = () => {
 
         <label>Vehicle Number</label>
         <input
-          name="vehicleNo"
-          value={formData.vehicleNo}
+          name="vehicle_no" // Corrected name attribute to match the state key
+          value={formData.vehicle_no}
           onChange={handleChange}
           placeholder="Enter your vehicle number"
           required
@@ -88,10 +88,10 @@ const Booking = () => {
 
         <label>Parking Duration (in hours)</label>
         <input
-          name="duration"
+          name="time_duration" // Corrected name attribute to match the state key
           type="number"
           step="0.1"
-          value={formData.duration}
+          value={formData.time_duration}
           onChange={handleChange}
           placeholder="Enter duration (e.g., 0.5)"
           required

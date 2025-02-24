@@ -6,34 +6,40 @@ import Footer from '../componets/footer';
 const About = () => {
     return (
         <div>
-            <div className="navbarDiv">
-                <NavBar />
-            </div>
+            <NavBar />
             <div className="about">
-                <div className="about-container">
-                    <h1>About Us</h1>
-                    <p>
-                        Welcome to <strong>Smart Parking System</strong>, your ultimate solution for hassle-free and efficient parking management. 
-                        Our mission is to transform the way you park, making it more convenient, time-saving, and stress-free.
+                <div className="aboutContent">
+                    <h1 className="header1">
+                        About Us
+                    </h1>
+                    <p className="para1">
+                        Welcome to Smart Parking System!
+                        We offer a hassle-free parking solution designed to save you time and reduce stress. With real-time slot availability and easy booking, we make parking more convenient and efficient. Our user-friendly interface, secure environment, and competitive pricing cater to your parking needs, whether you're commuting daily or visiting.
                     </p>
-                    <h2>What We Offer</h2>
-                    <ul>
-                        <li><strong>Real-Time Slot Availability:</strong> Check and book parking spaces instantly.</li>
-                        <li><strong>Affordable Pricing:</strong> Competitive rates to suit your parking needs.</li>
-                        <li><strong>User-Friendly Interface:</strong> A seamless experience from booking to parking.</li>
-                        <li><strong>Secure Environment:</strong> Ensuring the safety of your vehicles at all times.</li>
-                    </ul>
-                    <h2>Our Vision</h2>
-                    <p>
-                        At Smart Parking System, we envision a future where parking is no longer a hassle. 
-                        By leveraging modern technology, we aim to provide solutions that save time, reduce traffic congestion, 
-                        and enhance your overall experience.
-                    </p>
-                    <h2>Why Choose Us?</h2>
-                    <p>
-                        Whether you're a daily commuter or just visiting, Smart Parking System is your trusted partner. 
-                        With features like real-time availability, easy bookings, and competitive pricing, 
-                        we are redefining how parking works in the modern world.
+                </div>
+                <div className="aboutDetails">
+                    <div className="aboutDetails">
+                        <h2 className="header2">Our Vision</h2>
+                        <p className="para2">
+                        At Smart Parking System, we strive to revolutionize parking by eliminating unnecessary delays and frustrations.<br/>
+                        Through cutting-edge technology, we provide efficient, real-time parking solutions that save time, reduce traffic congestion, and enhance the overall urban experience.<br/>
+
+                        We believe in a future where finding a parking space is effortless, quick, and stress-free, ensuring convenience for everyone, from daily commuters to occasional travelers.
+                        </p>
+                    </div>
+                    <h2 className="header2" >What We Offer</h2>
+                    <p className="para2">
+                        At Smart Parking System, we provide a seamless and efficient parking experience designed to meet your needs. Our platform offers real-time slot availability, allowing you to check and book parking spaces instantly. We ensure affordable pricing, making parking convenient without breaking the bank. With a user-friendly interface, you can navigate effortlessly from booking to parking, saving time and effort. Additionally, our secure environment guarantees the safety of your vehicle at all times, giving you peace of mind while you park.</p>
+                    
+                </div>
+                <div className="aboutDetails">
+                    <h2 className="header2">Why Choose Us?</h2>
+                    <p className="para2">
+                    At Smart Parking System, we are committed to transforming the way you park by providing a seamless, reliable, and efficient experience. Whether you're a daily commuter, a visitor, or a business owner, our platform ensures hassle-free parking with real-time slot availability, easy bookings, and competitive pricing.<br/>
+
+                    We prioritize convenience, security, and affordability, offering a user-friendly interface that allows you to find and reserve parking spaces in just a few clicks. Our system is designed to reduce traffic congestion, save time, and enhance overall parking efficiency.<br/>
+
+                    With secure payment options, 24/7 availability, and advanced parking management tools, we are redefining modern parking solutions. Choose Smart Parking System—because parking should be the least of your worries! 🚗💡
                     </p>
                 </div>
             </div>

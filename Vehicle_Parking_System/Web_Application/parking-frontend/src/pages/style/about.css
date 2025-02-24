@@ -5,32 +5,73 @@ body {
     color: #333333;
 }
 
-.navbarDiv {
-    padding-bottom: 15px;
-}
 
-.about {
+.aboutContent{
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     justify-content: center;
     padding: 20px;
 }
 
-.about-container {
-    max-width: 900px;
-    background-color: #FFFFFF;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    margin: 20px auto;
+.aboutContent {
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    transition: transform 0.3s ease;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-.about-container:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.aboutContent::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0c43f5; /* Adjust the color and opacity as needed */
+    z-index: 1;
+}
+
+.aboutContent * {
+    position: relative;
+    z-index: 2;
+}
+
+.aboutDetails{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 100px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the content */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.stong{
+    color: black;
+    font-weight: 900;
+}
+
+
+.para1{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.para2{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
 }
 
 h1 {
@@ -51,7 +92,7 @@ h2 {
 p {
     font-size: 1.1rem;
     margin: 15px 0;
-    color: #555555;
+    color: white;
     line-height: 1.8;
     font-weight: 400;
 }

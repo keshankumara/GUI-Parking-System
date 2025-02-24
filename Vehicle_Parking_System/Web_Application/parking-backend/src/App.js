@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const controller = require('./controller');
 
+
 app.use(cors());
 
 app.use(
@@ -24,8 +25,8 @@ app.get('/parking', (req, res) => {
 
 
 app.post('/booking', (req, res) => {
-    controller.bookParking (req.body, (callback) => {
-        res.send();
+    controller.bookParking(req.body, (callback) => {
+        res.send(callback);
     });
 });
 
