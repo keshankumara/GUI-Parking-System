@@ -76,10 +76,15 @@ body {
     z-index: 2;
 }
 
+.book-btn{
+    transform: translateY(70px);
+}
+
 .book-btn:hover {
-    background-color: #0056b3;
+    background-color: #ffffff;
     scale: 1.05;
-    border: 2px solid white;
+    border: 0px solid white;
+    box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .header1 {
@@ -92,13 +97,15 @@ body {
 }
 
 .para1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     opacity: 0.9;
     margin-bottom: 2rem;
     font-weight: 400;
     color: #ffffff;
+    font-family: system-ui, -apple-system, sans-serif;
+    transform: translateY(15px);
+   
 }
-
 .home-body {
     display: flex;
     justify-content: center;
@@ -121,22 +128,24 @@ body {
 }
 
 .book-btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(53, 6, 163);
+    padding: 20px 30px;
     border: none;
-    border-radius: 15px;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
+    border-radius: 25px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;
+    
 }
 
-.card:hover {
+/* .card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-}
+} */
 
 .card img {
     width: 70%;
@@ -155,6 +164,7 @@ body {
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;
+    
 }
 
 .card-btn:hover {
@@ -165,6 +175,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .card p {
@@ -186,7 +197,7 @@ body {
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;

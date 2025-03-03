@@ -21,7 +21,16 @@ app.get('/parking', (req, res) => {
         res.send();
     });
 });
-
+app.get('/login', (req, res) => {
+    controller.login(req, res, next => {
+        res.send();
+    });
+});
+app.get('/register', (req, res) => {
+    controller.register(req, res, next => {
+        res.send();
+    });
+});
 
 
 app.post('/booking', (req, res) => {

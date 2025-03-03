@@ -1,13 +1,14 @@
 import React from 'react';
 import './navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Prk_icon from './images/park_icon.ico';
 
 function NavBar() {
+  const navigate = useNavigate(); // Create a navigate function
 
   const handleLogout = () => {
     localStorage.removeItem('isLogin');
-    window.location.reload();
+    navigate('/'); // Navigate to the landing page (home page)
   };
 
   return (

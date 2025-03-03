@@ -27,8 +27,8 @@ function Footer() {
         </div>
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p className='footer_para'>Email: keshnkumara11@gmail.com</p>
-          <p className='footer_para'>Phone: 071 0334073</p>
+          <p className='footer_para'>Email  : keshnkumara11@gmail.com</p>
+          <p className='footer_para'>Phone  : 071 0334073</p>
           <p className='footer_para'>Address: 123 Parking St, Tech City</p>
           {/* <div className="footer-socials">
             <a href="https://twitter.com" className="social-icon"><img src={whatsapp} alt="whatsapp" /></a>

@@ -59,7 +59,7 @@ const Home = () => {
           Find and reserve your perfect parking spot in seconds. Safe, secure,
           and hassle-free.
         </p>
-        <button className="book-btn">Get Started</button>
+        <button onClick={ButtonClick} className="book-btn">Get Started</button>
       </div>
       <div className="features-div">
         <div className="content-div">

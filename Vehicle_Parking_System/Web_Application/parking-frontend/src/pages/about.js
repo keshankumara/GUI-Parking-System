@@ -9,7 +9,7 @@ const About = () => {
             <NavBar />
             <div className="about">
                 <div className="aboutContent">
-                    <h1 className="header1">
+                    <h1 className="header2_colour">
                         About Us
                     </h1>
                     <p className="para1">
