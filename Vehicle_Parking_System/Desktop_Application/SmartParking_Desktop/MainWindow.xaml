@@ -1,0 +1,162 @@
+﻿<Window x:Class="SmartParking_Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartParking_Desktop"
+        mc:Ignorable="d"
+        Title="Vehicle Parking System"
+        Height="600" Width="900"
+        MinWidth="800" MinHeight="450"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="White">
+
+    <Grid>
+        <!-- Grid Row Definitions -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Header -->
+            <RowDefinition Height="*"/>
+            <!-- Main Content -->
+            <RowDefinition Height="Auto"/>
+            <!-- Footer -->
+        </Grid.RowDefinitions>
+
+        <!-- Header Section -->
+        <DockPanel Grid.Row="0" Background="DarkGray" LastChildFill="False">
+            <!-- Application Title -->
+            <Label Content="ParkEase"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Foreground="White"
+                   Margin="10"
+                   DockPanel.Dock="Left"/>
+
+            <!-- Navigation Buttons (Aligned to the Right) -->
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" Margin="10">
+                <Button Content="Home" Margin="5" Padding="10" MinWidth="80" Click="HomeButton_Click"/>
+                <Button Name="about" Content="About" Margin="5" Padding="10" MinWidth="80" Click="AboutButton_Click"/>
+                <Button Name="login" Content="Login" Margin="5" Padding="10" MinWidth="80" Click="LoginButton_Click"/>
+                <Button Name="register" Content="Register" Margin="5" Padding="10" MinWidth="80" Click="RegisterButton_Click"/>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- Main Content Section -->
+        <Grid Grid.Row="1" Background="White">
+            <!-- Welcome Message -->
+            <StackPanel Background="Blue" Margin="0,0,0,232"/>
+            <TextBlock Text="Welcome to Vehicle Parking System"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="white"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="10"/>
+            <TextBlock Text="Find and reserve your perfect parking spot in seconds. Safe, secure, and hassle-free."
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Foreground="white"
+                       Margin="0,52,0,0"/>
+            <!-- Parking Slots Container -->
+            <Grid Margin="20,128,20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Parking Slot 1 -->
+                <StackPanel Grid.Column="0" 
+                            MinWidth="200" Height="Auto"
+                            Margin="10,10,10,29">
+                    <Image Source="C:\Users\Keshan\Desktop\aa\WpfApp1\WpfApp1\images\car.ico" 
+                           Width="Auto"
+                           Height="200"
+                           Stretch="Uniform"
+                           HorizontalAlignment="Center"/>
+                    <Label Content="Rs : 200 Per Hour" 
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           Margin="5"/>
+                    <Button Width="150"
+                            Height="40"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Background="Blue"
+                            Foreground="White"
+                            Click="LoginButton_Click"
+                            HorizontalAlignment="Center">
+                        Available
+                    </Button>
+                </StackPanel>
+
+                <!-- Parking Slot 2 -->
+                <StackPanel Grid.Column="1" 
+                            MinWidth="200" Height="Auto"
+                            Margin="10,10,10,29">
+                    <Image Source="C:\Users\Keshan\Desktop\aa\WpfApp1\WpfApp1\images\bike.ico" 
+                           Width="Auto"
+                           Height="200"
+                           Stretch="Uniform"
+                           HorizontalAlignment="Center"/>
+                    <Label Content="Rs : 200 Per Hour" 
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           Margin="5"/>
+                    <Button Width="150"
+                            Height="40"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Background="Blue"
+                            Foreground="White"
+                            Click="LoginButton_Click"
+                            HorizontalAlignment="Center">
+                        Available
+                    </Button>
+                </StackPanel>
+
+                <!-- Parking Slot 3 -->
+                <StackPanel Grid.Column="2"
+                            MinWidth="200" Height="Auto"
+                            Margin="10,10,10,29">
+                    <Image Source="C:\Users\Keshan\Desktop\aa\WpfApp1\WpfApp1\images\truck.ico" 
+                           Width="Auto"
+                           Height="200"
+                           Stretch="Uniform"
+                           HorizontalAlignment="Center"/>
+                    <Label Content="Rs : 200 Per Hour" 
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           Margin="5"/>
+                    <Button Width="150"
+                            Height="40"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Background="Blue"
+                            Foreground="White"
+                            Click="LoginButton_Click"
+                            HorizontalAlignment="Center">
+                        Available
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <!-- Footer Section -->
+        <DockPanel Grid.Row="2" Background="LightGray" LastChildFill="False">
+            <!-- Copyright Information -->
+            <Label Content="@All rights reserved."
+                   FontSize="16"
+                   Margin="10"
+                   DockPanel.Dock="Left"/>
+
+            <!-- Contact Information -->
+            <Label Content="Contact Us: 0710334073"
+                   FontSize="16"
+                   Margin="10"
+                   DockPanel.Dock="Right"/>
+        </DockPanel>
+    </Grid>
+</Window>

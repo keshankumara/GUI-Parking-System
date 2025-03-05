@@ -1,0 +1,106 @@
+﻿<Window x:Class="SmartParking_Desktop.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartParking_Desktop"
+        mc:Ignorable="d"
+        Title="Vehicle Parking System"
+        Height="600" Width="900"
+        MinWidth="800" MinHeight="450"
+        WindowStartupLocation="CenterScreen"
+        Background="White">
+
+    <Grid>
+        <!-- Grid Row Definitions -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header Section -->
+        <DockPanel Grid.Row="0" Background="DarkGray" LastChildFill="False">
+            <Label Content="ParkEase"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Foreground="White"
+                   Margin="10"
+                   DockPanel.Dock="Left"/>
+
+            <!-- Navigation Buttons -->
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" Margin="10">
+                <Button Click="LogOutButton_Click" Content="LogOut" Margin="5" Padding="10" MinWidth="80"/>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- Blue Background Section -->
+        <Border Grid.Row="1" Background="Blue">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Booking Successful!"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="Your parking spot has been successfully reserved."
+                           FontSize="18"
+                           HorizontalAlignment="Center"
+                           Foreground="White"
+                           Margin="0,10,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Main Content Section with Booking Details -->
+        <Grid Grid.Row="2" Background="White">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+                <TextBlock Text="Booking Details"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <!-- Displaying booking details -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <!-- Email -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="left" Margin="5,0,5,10">
+                        <TextBlock Text="Email : " FontSize="14" VerticalAlignment="Center" Margin="5,0,5,5"/>
+                        <TextBlock x:Name="BookingEmailTextBlock" FontSize="14" VerticalAlignment="Center" Margin="5,0,5,5"/>
+                    </StackPanel>
+
+                    <!-- Vehicle Type -->
+                    <StackPanel Orientation="Horizontal" Margin="5,0,5,5">
+                        <TextBlock Text="Vehicle Type : " FontSize="14" VerticalAlignment="Top" Margin="5,0,5,5"/>
+                        <TextBlock x:Name="BookingVehicleTypeTextBlock" FontSize="14" VerticalAlignment="Center" Margin="5,0,5,5"/>
+                    </StackPanel>
+
+                    <!-- Vehicle Number -->
+                    <StackPanel Orientation="Horizontal" Margin="5,0,5,5">
+                        <TextBlock Text="Vehicle Number : " FontSize="14" VerticalAlignment="Top" Margin="5,0,5,5"/>
+                        <TextBlock x:Name="BookingVehicleNumberTextBlock" FontSize="14" VerticalAlignment="Center" Margin="5,0,5,5"/>
+                    </StackPanel>
+
+                    <!-- Parking Duration -->
+                    <StackPanel Orientation="Horizontal" Margin="5,0,5,5">
+                        <TextBlock Text="Parking Duration : " FontSize="14" VerticalAlignment="Top" Margin="5,0,5,5"/>
+                        <TextBlock x:Name="BookingDurationTextBlock" FontSize="14" VerticalAlignment="Center" Margin="5,0,5,5"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+
+        <!-- Footer Section -->
+        <DockPanel Grid.Row="3" Background="LightGray" LastChildFill="False">
+            <Label Content="© All rights reserved."
+                   FontSize="16"
+                   Margin="10"
+                   DockPanel.Dock="Left"/>
+
+            <Label Content="Contact Us: 0710334073"
+                   FontSize="16"
+                   Margin="10"
+                   DockPanel.Dock="Right"/>
+        </DockPanel>
+    </Grid>
+</Window>
