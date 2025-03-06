@@ -1,142 +1,180 @@
-/* Base Styles */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f6f9; /* Soft light gray background */
-    height: 100vh; /* Full height of the viewport */
-  }
-  
-  /* Main Div (holds the entire content) */
-  .main-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height of viewport */
-    background-color: #e0e4e8; /* Light grayish background */
-    padding: 0;
-  }
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F9F9F9;
+  color: #333333;
+}
 
-  .header {
-    /* font-size: 2.5rem; */
-    color: #004AAD;
-    margin-bottom: 20px;
-    font-weight: 600;
+.navbarDiv {
+  padding-bottom: 15px;
+}
 
-  }
-  
-  /* Booking Container (flex to center form) */
+.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.booking-container {
+  max-width: 400px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 20px auto;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.booking-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #004AAD;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.booking-form {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 1rem;
+  color: #333333;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #004AAD;
+  box-shadow: 0 0 8px rgba(0, 74, 173, 0.4);
+}
+
+.booking-btn {
+  background-color: #004AAD;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  font-weight: 600;
+}
+
+.booking-btn:hover {
+  background-color: #003380;
+  box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+}
+
+.booking-footer {
+  margin-top: 20px;
+}
+
+.booking-footer p {
+  font-size: 1rem;
+  color: #555555;
+}
+
+.booking-footer a {
+  color: #004AAD;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.booking-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Success and Error Alert Box Styling */
+.alert-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1000;
+  width: 300px;
+}
+
+.alert-box h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.alert-box p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.alert-box button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.alert-box button:hover {
+  background-color: #2980b9;
+}
+
+/* Success Box */
+.alert-box.success {
+  border-left: 5px solid #2ecc71;
+}
+
+/* Error Box */
+.alert-box.error {
+  border-left: 5px solid #e74c3c;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
   .booking-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 15px; /* Slightly less padding around the form */
-    background-color: #f4f6f9; /* Soft light background */
+    padding: 25px;
+    margin: 15px;
   }
-  
-  /* Form Styles */
-  .booking_form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* Reduced gap between form fields */
-    background: #ffffff; /* White background for the form */
-    padding: 20px; /* Reduced padding */
-    border-radius: 12px; /* Slightly rounded corners */
-    width: 350px; /* Narrower form width */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
-    text-align: center;
-    color: #333; /* Dark gray text for readability */
+
+  h2 {
+    font-size: 2rem;
   }
-  
-  /* Hover effect on the form */
-  .booking_form:hover {
-    background-color: #f9f9f9; /* Slight lightening of the background */
+
+  .input-group input, .booking-btn {
+    font-size: 0.95rem;
   }
-  
-  /* Label Styling */
-  .booking_form label {
-    font-size: 14px; /* Slightly smaller font size */
-    color: #2c3e50; /* Darker shade for text */
-    margin-bottom: 6px; /* Reduced space between label and input */
-  }
-  
-  /* Input and Select Fields Styling */
-  .booking_form input,
-  .booking_form select {
-    padding: 10px; /* Slightly reduced padding */
-    font-size: 14px;
-    border-radius: 8px; /* Soft rounded borders */
-    border: 1px solid #ddd; /* Soft border */
-    margin-bottom: 12px; /* Reduced space between fields */
-    width: 100%;
-    box-sizing: border-box;
-    outline: none;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f9f9f9; /* Light background for inputs */
-  }
-  
-  /* Focus effect on inputs and selects */
-  .booking_form input:focus,
-  .booking_form select:focus {
-    border-color: #3498db; /* Blue border on focus */
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4); /* Soft blue shadow */
-  }
-  
-  /* Button Styling */
-  .bool_btn {
-    padding: 10px 18px; /* Slightly reduced padding */
-    font-size: 16px;
-    border-radius: 25px; /* Rounded button corners */
-    background-color: #0c43f5; /* Blue button */
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-  }
-  
-  /* Button hover effect */
-  .bool_btn:hover {
-    background-color: #0c43f5; /* Darker blue when hovered */
-  }
-  
-  /* Success alert box styling */
-  .alert-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the alert box */
-    background-color: #ffffff;
-    padding: 20px; /* Slightly reduced padding */
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
-    text-align: center;
-    z-index: 1000;
-    width: 300px; /* Slightly smaller width for alert */
-  }
-  
-  /* Success message in alert box */
-  .alert-box h1 {
-    color: #2ecc71; /* Green color for success message */
-    font-size: 16px; /* Slightly smaller text */
-    margin-bottom: 8px;
-  }
-  
-  /* Button in alert box */
-  .alert-box button {
-    background-color: #2ecc71; /* Green button in alert */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px; /* Rounded corners */
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  /* Hover effect for button in alert box */
-  .alert-box button:hover {
-    background-color: #27ae60; /* Darker green on hover */
-  }
-  
+}
