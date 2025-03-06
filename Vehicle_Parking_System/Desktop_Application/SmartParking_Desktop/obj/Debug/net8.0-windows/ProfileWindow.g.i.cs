@@ -85,7 +85,7 @@ namespace SmartParking_Desktop {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SmartParking_Desktop;component/profilewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SmartParking_Desktop;V1.0.0.0;component/profilewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ProfileWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
