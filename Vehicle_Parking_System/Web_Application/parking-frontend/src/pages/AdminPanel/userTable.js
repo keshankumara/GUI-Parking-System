@@ -7,12 +7,12 @@ const UsersTable = ({ rows, selectedUser, deleteUser }) => {
             <Table className="users-table">
                 <TableHead>
                     <TableRow className="table-header-row">
-                        <TableCell>ID</TableCell>
-                        <TableCell>Vehicle No</TableCell>
-                        <TableCell>Vehicle Type</TableCell>
+                        
                         <TableCell>Name</TableCell>
                         <TableCell>Email</TableCell>
                         <TableCell>Password</TableCell>
+                        <TableCell>Vehicle Type</TableCell>
+                        <TableCell>Vehicle No</TableCell>
                         <TableCell>Time Duration</TableCell>
                         <TableCell>Action for Update</TableCell>
                         <TableCell>Action for Delete</TableCell>
@@ -22,12 +22,12 @@ const UsersTable = ({ rows, selectedUser, deleteUser }) => {
                     {rows.length > 0 ? (
                         rows.map((row) => (
                             <TableRow key={row._id} className="table-body-row">
-                                <TableCell>{row.id}</TableCell>
-                                <TableCell>{row.vehicle_no}</TableCell>
-                                <TableCell>{row.vehicle_type}</TableCell>
+                                
                                 <TableCell>{row.name}</TableCell>
                                 <TableCell>{row.email}</TableCell>
                                 <TableCell>{row.password}</TableCell>
+                                <TableCell>{row.vehicle_type}</TableCell>
+                                <TableCell>{row.vehicle_no}</TableCell>
                                 <TableCell>{row.time_duration}</TableCell>
                                 <TableCell>
                                     <button

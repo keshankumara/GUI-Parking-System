@@ -1,30 +1,26 @@
+/* Table Styles */
 .table-container {
-    margin: 30px;
+    margin-top: 30px;
+    background-color: #fff;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+    overflow: hidden;
 }
 
 .users-table {
     width: 100%;
     border-collapse: collapse;
-    font-family: 'Arial', sans-serif;
 }
 
 .table-header-row {
-    background-color: #ff5733;
+    background-color: #007BFF;
     color: #ffffff;
     font-weight: bold;
 }
 
-.table-header-row th {
-    padding: 10px;
+.table-header-row th, .table-body-row td {
+    padding: 12px;
     text-align: left;
-}
-
-.table-body-row {
-    transition: background-color 0.3s;
 }
 
 .table-body-row:nth-child(even) {
@@ -32,38 +28,34 @@
 }
 
 .table-body-row:hover {
-    background-color: #ffedeb;
+    background-color: #f1f1f1;
 }
 
-.table-body-row td {
-    padding: 10px;
-    border-bottom: 1px solid #dddddd;
-}
-
-.update-button,
-.delete-button {
-    background-color: #006eff;
-    color: #ffffff;
+/* Button Styling */
+.update-button, .delete-button {
+    background-color: #007BFF;
+    color: white;
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .update-button:hover {
-    background-color: #004bb7;
+    background-color: #0056b3;
 }
 
 .delete-button {
-    background-color: #ff3333;
+    background-color: #D9534F;
 }
 
 .delete-button:hover {
     background-color: #cc0000;
 }
 
+/* No Data Cell */
 .no-data-cell {
     text-align: center;
     padding: 20px;

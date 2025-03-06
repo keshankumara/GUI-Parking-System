@@ -49,12 +49,12 @@ const Register = () => {
                     {errorMessage && <div className="error-message">{errorMessage}</div>}
                     <form className="register-form">
                         <div className="input-group">
-                            <label htmlFor="fullname">Full Name</label>
+                            <label htmlFor="fullname">Userame</label>
                             <input
                                 type="text"
                                 id="fullname"
                                 name="fullname"
-                                placeholder="Enter your full name"
+                                placeholder="Enter your username"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 required

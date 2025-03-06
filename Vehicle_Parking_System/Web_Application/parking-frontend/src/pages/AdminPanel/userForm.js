@@ -1,9 +1,8 @@
-import { Grid, Typography } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import { useEffect, useState } from 'react';
 import './userForm.css';
 
 const UserForm = ({ bookParking, updateParking, submitted, data, isEdit }) => {
-    const [id, setId] = useState(0);
     const [vehicle_no, setVehicleNo] = useState('');
     const [vehicle_type, setVehicleType] = useState('');
     const [name, setName] = useState('');
@@ -12,8 +11,7 @@ const UserForm = ({ bookParking, updateParking, submitted, data, isEdit }) => {
     const [time_duration, setTimeDuration] = useState('');
 
     useEffect(() => {
-        if (!submitted) {
-            setId(0);
+        if (!submitted && !isEdit) {
             setVehicleNo('');
             setVehicleType('');
             setName('');
@@ -21,14 +19,13 @@ const UserForm = ({ bookParking, updateParking, submitted, data, isEdit }) => {
             setPassword('');
             setTimeDuration(0);
         }
-    }, [submitted]);
+    }, [submitted, isEdit]);
 
     useEffect(() => {
         if (data?._id && data._id !== 0) {
-            setId(data.id);
             setVehicleNo(data.vehicle_no);
             setVehicleType(data.vehicle_type);
-            setName(data.username);
+            setName(data.name);
             setEmail(data.email);
             setPassword(data.password);
             setTimeDuration(data.time_duration);
@@ -37,7 +34,6 @@ const UserForm = ({ bookParking, updateParking, submitted, data, isEdit }) => {
 
     const handleSubmit = () => {
         const formData = {
-            id,
             name,
             email,
             password,
@@ -54,56 +50,39 @@ const UserForm = ({ bookParking, updateParking, submitted, data, isEdit }) => {
 
     return (
         <Grid container spacing={2} className="form-container">
-            <Grid item xs={12}>
-                <Typography className="form-title">User Form</Typography>
-            </Grid>
-
-            {/* ID Input */}
-            <Grid item xs={12} sm={6} className="form-row">
-                <label htmlFor="id">ID</label>
-                <input type="number" id="id" value={id} onChange={(e) => setId(e.target.value)} />
-            </Grid>
-
-            {/* Vehicle Number Input */}
             <Grid item xs={12} sm={6} className="form-row">
                 <label htmlFor="vehicle_no">Vehicle No</label>
                 <input type="text" id="vehicle_no" value={vehicle_no} onChange={(e) => setVehicleNo(e.target.value)} />
             </Grid>
 
-            {/* Vehicle Type Input */}
             <Grid item xs={12} sm={6} className="form-row">
                 <label htmlFor="vehicle_type">Vehicle Type</label>
                 <input type="text" id="vehicle_type" value={vehicle_type} onChange={(e) => setVehicleType(e.target.value)} />
             </Grid>
 
-            {/* Name Input */}
             <Grid item xs={12} sm={6} className="form-row">
                 <label htmlFor="name">Username</label>
                 <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
             </Grid>
 
-            {/* Email Input */}
             <Grid item xs={12} sm={6} className="form-row">
                 <label htmlFor="email">Email</label>
                 <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </Grid>
 
-            {/* Password Input */}
             <Grid item xs={12} sm={6} className="form-row">
                 <label htmlFor="password">Password</label>
                 <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             </Grid>
 
-            {/* Time Duration Input */}
             <Grid item xs={12} sm={6} className="form-row">
                 <label htmlFor="time_duration">Time Duration</label>
                 <input type="number" id="time_duration" value={time_duration} onChange={(e) => setTimeDuration(e.target.value)} />
             </Grid>
 
-            {/* Submit Button */}
             <Grid item xs={12}>
                 <button className="submit-button" onClick={handleSubmit}>
-                    {isEdit ? 'Update' : 'Add'}
+                    {isEdit ? 'Update' : 'Update'}
                 </button>
             </Grid>
         </Grid>
