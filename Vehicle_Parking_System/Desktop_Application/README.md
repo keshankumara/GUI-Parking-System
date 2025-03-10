@@ -95,10 +95,6 @@ vehicle-parking-system/
 
 Contributions are welcome! Fork the repository, create a feature branch, and submit a pull request for review.
 
-## License
-
-This project is licensed under the MIT License.
-
 ---
 
 **Start managing parking operations effortlessly with the Vehicle Parking System!**
